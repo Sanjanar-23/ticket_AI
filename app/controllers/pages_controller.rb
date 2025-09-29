@@ -6,4 +6,8 @@ class PagesController < ApplicationController
 
   def view
   end
+
+  def create_ticket
+  end
+
 end
