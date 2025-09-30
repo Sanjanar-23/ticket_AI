@@ -1,0 +1,7 @@
+<h2>Chat History</h2>
+
+<% @messages.each do |message| %>
+  <p><strong><%= message.role.capitalize %>:</strong> <%= message.content %></p>
+<% end %>
+
+<%= link_to "Ask Another Question", new_message_path %>

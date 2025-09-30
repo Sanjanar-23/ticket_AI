@@ -1,0 +1,18 @@
+
+
+<h1>Create the tickets</h1>
+<%= form_with model: @ticket do |f| %>
+  <%= f.label :company_name %>
+  <%= f.text_field :company_name %>
+
+  <%= f.label :customer_name %>
+  <%= f.text_field :customer_name %>
+
+  <%= f.label :customer_number %>
+  <%= f.number_field :customer_number %>
+
+  <%= f.label :issue %>
+  <%= f.text_field :issue %>
+
+  <%= f.submit %>
+<% end %>

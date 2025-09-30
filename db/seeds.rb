@@ -7,3 +7,18 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require 'faker'
+
+puts 'Creating 100 fake tickets...'
+
+100.times do
+  Ticket.create!(
+    company_name: Faker::Company.name,
+    customer_name: Faker::Name.name,
+    customer_number: Faker::Number.number(digits: 10),  # max 9 digits fits integer limit
+    issue: Faker::Lorem.sentence(word_count: 5),       # text field for issue description
+    created_date: Faker::Date.backward(days: 365)     # random date in last year
+  )
+end
+
+puts 'Finished!'

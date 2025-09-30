@@ -28,6 +28,10 @@ gem "jbuilder"
 
 gem "ruby_llm", "~> 1.6.4"
 
+gem 'faker'
+gem 'openai'
+
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

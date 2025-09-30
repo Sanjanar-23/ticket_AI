@@ -1,0 +1,17 @@
+<h1>Create a New Ticket</h1>
+
+<%= form_with model: @ticket, local: true do |f| %>
+  <%= f.label :company_name %>
+  <%= f.text_field :company_name %><br>
+
+  <%= f.label :customer_name %>
+  <%= f.text_field :customer_name %><br>
+
+  <%= f.label :customer_number %>
+  <%= f.number_field :customer_number %><br>
+
+  <%= f.label :issue %>
+  <%= f.text_field :issue %><br>
+
+  <%= f.submit "Create Ticket" %>
+<% end %>

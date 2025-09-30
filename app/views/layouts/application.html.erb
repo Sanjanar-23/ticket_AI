@@ -12,6 +12,11 @@
 
   <body><%= render "shared/navbar" %>
 <%= render "shared/flashes" %>
+<% if notice %>
+  <div class="popup-message"><%= notice %></div>
+<% end %>
+
+
 
     <%= yield %>
   </body>
