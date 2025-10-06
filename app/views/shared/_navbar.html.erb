@@ -1,7 +1,21 @@
 <nav class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+      <%# <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %> %>
+
+      <div class="row justify-content-center">
+          <div class="col-sm-8 my-3">
+            <%= form_with url: tickets_path, method: :get, class: "d-flex" do %>
+              <%= text_field_tag :query,
+                    params[:query],
+                    class: "form-control",
+                    placeholder: "Type a keyword"
+                %>
+              <%= link_to "Search", show_ticket_path, class: "btn btn-primary" %>
+
+            <% end %>
+          </div>
+      </div>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

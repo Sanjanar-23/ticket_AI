@@ -2,9 +2,13 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  get "view", to: "pages#view"
-resources :tickets, only: [:new, :create, :show]
-resources :messages, only: [:new, :create, :index]
+    get "view", to: "pages#view"
+    resources :tickets, only: [:new, :create, :show, :show_ticket]
+    resources :messages, only: [:new, :create, :index] do
+      collection do
+        delete :clear
+      end
+    end
 
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

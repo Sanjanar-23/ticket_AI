@@ -13,5 +13,8 @@
   <%= f.label :issue %>
   <%= f.text_field :issue %><br>
 
+  <%= f.label :status %><br>
+  <%= f.select :status, options_for_select([['Open', 'open'], ['Closed', 'closed']], @ticket.status) %><br>
+
   <%= f.submit "Create Ticket" %>
 <% end %>
