@@ -2,23 +2,24 @@ class TicketsController < ApplicationController
   def new
     @ticket = Ticket.new
   end
-def create
-  @ticket = Ticket.new(ticket_params)
-  if @ticket.save
-    redirect_to new_ticket_path, notice: "Ticket created successfully!"
-  else
-    render :new
+
+  def create
+    @ticket = Ticket.new(ticket_params)
+    if @ticket.save
+      redirect_to new_ticket_path, notice: "Ticket created successfully!"
+    else
+      render :new
+    end
   end
-end
 
   def show
     @ticket = Ticket.find(params[:id])
   end
 
-  def show_tickets
-    # @movies = Ticket.all
+  def index
+     @tickets = Ticket.all
     if params[:query].present?
-      @tickets = @tickets.where("title ILIKE ?", "%#{params[:query]}%")
+      @tickets = @tickets.where("issue ILIKE ?", "%#{params[:query]}%")
     end
 
   end
