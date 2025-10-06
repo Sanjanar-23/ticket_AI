@@ -16,12 +16,11 @@ end
   end
 
   def show_tickets
-    def index
-  # @movies = Ticket.all
-  if params[:query].present?
-    @tickets = @tickets.where("title ILIKE ?", "%#{params[:query]}%")
-  end
-end
+    # @movies = Ticket.all
+    if params[:query].present?
+      @tickets = @tickets.where("title ILIKE ?", "%#{params[:query]}%")
+    end
+
   end
 
   private
