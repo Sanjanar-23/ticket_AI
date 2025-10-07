@@ -16,7 +16,10 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 pin "@fortawesome/fontawesome-free", to: "https://ga.jspm.io/npm:@fortawesome/fontawesome-free@6.1.1/js/all.js"
 
 
+
 pin "chartkick", to: "chartkick.js"
+pin "Chart.bundle", to: "Chart.bundle.js"
+
 pin "chart.js", to: "chart.js"
 pin "Chart.bundle", to: "Chart.bundle.js" # or "Chart.min.js" depending on your preference
 pin "@fortawesome/fontawesome-free", to: "@fortawesome--fontawesome-free.js" # @7.0.1

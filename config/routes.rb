@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
     get "view", to: "pages#view"
-    resources :tickets, only: [:new, :create, :show, :index] do
+    resources :tickets, only: [:new, :create,:index, :show, :edit, :update]  do
       collection do
         get :show_ticket
       end

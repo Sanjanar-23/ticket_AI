@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <h1>Ticket Details</h1>
+
+<p><strong>Company Name:</strong> <%= @ticket.company_name %></p>
+<p><strong>Customer Name:</strong> <%= @ticket.customer_name %></p>
+<p><strong>Customer Number:</strong> <%= @ticket.customer_number %></p>
+<p>
+    <strong>Email:</strong> <%= @ticket.email %>
+    <%= link_to "Send Mail", "#", class: "btn btn-sm btn-primary ms-2" %>  <!-- Replace "#" with mail action path -->
+  </p><p><strong>Issue:</strong> <%= @ticket.issue %></p>
+<p><strong>Status:</strong> <%= @ticket.status.capitalize %></p>
+<%= link_to "Edit", edit_ticket_path(@ticket), class: "btn btn-warning" %>
+<%= link_to "Back to Tickets", tickets_path, class: "btn btn-secondary ms-2" %>
+
+</div>

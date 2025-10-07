@@ -5,4 +5,8 @@
 <p>Closed Tickets: <%= @closed_tickets_count %></p>
 
 
+<h2>Ticket Status Overview</h2>
+
+<%= pie_chart @ticket_status_counts, height: "300px", colors: ["#007bff", "#28a745"] %>
+
 </div>

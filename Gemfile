@@ -30,8 +30,7 @@ gem "ruby_llm", "~> 1.6.4"
 
 gem 'faker'
 gem 'openai'
-gem 'chartkick'
-gem 'groupdate'
+
 
 
 # Use Redis adapter to run Action Cable in production
@@ -58,6 +57,8 @@ gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
+gem 'kaminari'
+
 
 group :development, :test do
   gem "dotenv-rails"
@@ -71,6 +72,10 @@ group :development do
   gem "httplog"
   gem "pry-byebug"
   gem "pry-rails"
+  gem 'kaminari'
+  gem 'chartkick'
+gem 'groupdate'   # optional, helps with date grouping for charts
+
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

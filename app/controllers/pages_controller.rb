@@ -20,6 +20,11 @@ class PagesController < ApplicationController
   def index
   @open_tickets_count = Ticket.where(status: 'open').count
   @closed_tickets_count = Ticket.where(status: 'closed').count
+
+  @ticket_status_counts = {
+    "Open" => Ticket.where(status: 'open').count,
+    "Closed" => Ticket.where(status: 'closed').count
+  }
 end
 
 

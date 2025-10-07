@@ -1,0 +1,5 @@
+/* Lighten placeholder text color */
+.form-control::placeholder {
+  color: #999999;
+  opacity: 1;
+}
