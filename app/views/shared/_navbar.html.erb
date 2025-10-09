@@ -1,9 +1,14 @@
+<!-- Image and text -->
 <nav class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+    <img src="/app/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Bootstrap
+  </a>
+
     <%= link_to "#", class: "navbar-brand" do %>
-
-
     <% end %>
+
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -20,7 +25,18 @@
           </li>
           <li class="create-item">
             <%= link_to "Ticket", tickets_path, class: "nav-link" %>
+
           </li>
+           <li class="logout">
+    <button type="button" class="btn btn-info" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+     Logout
+    </button>
+
+        <%= form_with url: destroy_user_session_path, method: :delete, id: "logout-form", style: "display: none;" do %>
+        <% end %>
+
+           </li>
+
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           </a>

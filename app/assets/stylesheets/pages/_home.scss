@@ -2,3 +2,38 @@
 h1 {
   color: rgb(165, 58, 58);
 }
+.ticket-count-box {
+  border: 1px solid #aaa;         /* softer grey border */
+  border-radius: 12px;            /* subtle rounded corners */
+  padding: 1.5rem 2rem;
+  text-align: center;
+  color: #333;                   /* dark grey text */
+  background-color: #f9f9f9;     /* very light grey background */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  transition: box-shadow 0.3s ease;
+  min-width: 180px;
+  cursor: default;
+}
+
+.ticket-count-box:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* deeper shadow on hover */
+}
+
+.ticket-count-box p {
+  font-weight: 600;
+  color: #007bff;                /* Bootstrap primary blue */
+  margin-bottom: 0.5rem;
+}
+
+.ticket-count-box h4 {
+  font-size: 2.25rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.chart-box {
+  border: 1px solid rgba(0, 0, 0, 0.1); /* cute gray color */
+  border-radius: 15px;
+  padding: 12px;
+  background-color: #f9f9f9; /* subtle background */
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);}

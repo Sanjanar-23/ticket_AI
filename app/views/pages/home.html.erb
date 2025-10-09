@@ -1,12 +1,27 @@
+
 <div class="container">
+<div class="count m-4 d-flex gap-3">
+  <div class="ticket-count-box flex-fill">
+    <p>Open Tickets</p>
+    <h4><%= @open_tickets_count %></h4>
+  </div>
+  <div class="ticket-count-box flex-fill">
+    <p>Closed Tickets</p>
+    <h4><%= @closed_tickets_count %></h4>
+  </div>
+</div>
+
+<h1>Ticket Status Overview</h1>
+
+<div class="d-flex gap-4 mt-4" >
+  <div class="col-md-6 chart-box">
+    <%= pie_chart Ticket.where.not(status: nil).group(:status).count, height: "300px", colors: ["#007bff", "#28a745"] %>
+  </div>
+  <div class="col-md-6 chart-box">
+    <%= column_chart Ticket.group_by_month(:created_at, format: "%b %Y").count, height: "300px", library: {title: {text: "Tickets by Month", x: -20}} %>
+  </div>
+</div>
 
 
-<p>Open Tickets: <%= @open_tickets_count %></p>
-<p>Closed Tickets: <%= @closed_tickets_count %></p>
-
-
-<h2>Ticket Status Overview</h2>
-
-<%= pie_chart @ticket_status_counts, height: "300px", colors: ["#007bff", "#28a745"] %>
 
 </div>

@@ -6,9 +6,9 @@ class MessagesController < ApplicationController
   end
 
   def clear
-  Message.delete_all
-  redirect_to messages_path, notice: "Chat history cleared!"
-end
+    Message.delete_all
+    redirect_to messages_path, notice: "Chat history cleared!"
+  end
 
 
   def new
