@@ -2,9 +2,8 @@
 <nav class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-    <img src="/app/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    Bootstrap
-  </a>
+      <%= image_tag "logo.png", width: 30, height: 30, class: "d-inline-block align-top", alt: "" %>
+     </a>
 
     <%= link_to "#", class: "navbar-brand" do %>
     <% end %>
@@ -28,7 +27,7 @@
 
           </li>
            <li class="logout">
-    <button type="button" class="btn btn-info" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+    <button type="button" class="btn btn-primary-light" style="border-radius: 12px; onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
      Logout
     </button>
 

@@ -1,0 +1,25 @@
+
+<%= simple_form_for(@company) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :address_section %>
+    <%= f.input :area %>
+    <%= f.input :city %>
+    <%= f.input :state %>
+   <div class="field">
+  <%= form.label :country %>
+  <%= form.select :country, options_for_select(['India', 'USA', 'UK', 'Canada', 'Australia'], @company.country), prompt: "Select Country" %>
+</div>
+
+    <%= f.input :website %>
+    <%= f.input :phone %>
+    <%= f.input :territory %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
