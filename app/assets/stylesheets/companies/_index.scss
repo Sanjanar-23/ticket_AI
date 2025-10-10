@@ -1,0 +1,16 @@
+.company-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin: 32px 0 0 0;
+}
+.company-card {
+  flex: 0 0 calc(33.333% - 28px); /* 3 per row with gap */
+  box-sizing: border-box;
+  margin-bottom: 34px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.90);
+  border: 1px solid #e7e7e7;
+  box-shadow: 0 2px 9px rgba(64,64,128,0.06);
+  padding: 22px 18px;
+}

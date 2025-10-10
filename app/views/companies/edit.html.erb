@@ -1,6 +1,8 @@
 <h1>Editing company</h1>
 
-<%= render "form", company: @company %>
+<%= form_with(model: @company) do |form| %>
+  <%= render "form", form: form %>
+<% end %>
 
 <br>
 

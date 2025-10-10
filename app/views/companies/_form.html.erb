@@ -10,9 +10,9 @@
     <%= f.input :city %>
     <%= f.input :state %>
    <div class="field">
-  <%= form.label :country %>
-  <%= form.select :country, options_for_select(['India', 'USA', 'UK', 'Canada', 'Australia'], @company.country), prompt: "Select Country" %>
-</div>
+      <%= form.label :country %>
+       <%= form.select :country, options_for_select(['India', 'USA', 'UK', 'Canada', 'Australia'], @company.country), prompt: "Select Country" %>
+    </div>
 
     <%= f.input :website %>
     <%= f.input :phone %>

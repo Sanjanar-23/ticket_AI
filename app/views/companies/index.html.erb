@@ -1,14 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Companies</h1>
-
-<div id="companies">
-  <% @companies.each do |company| %>
-    <%= render company %>
-    <p>
-      <%= link_to "Show this company", company %>
-    </p>
-  <% end %>
+<div class="d-flex justify-content-between align-items-center mb-5">
+  <h1 class="mb-0">Companies</h1>
+  <%= link_to "New company", new_company_path, class: "btn px-4", style: "background-color: #6ea8fe; border-radius: 18px; margin-right: 11%;" %>
 </div>
 
-<%= link_to "New company", new_company_path %>
+<div class="company-cards-row">
+  <% @companies.each do |company| %>
+    <%= render partial: "company_card", locals: { company: company } %>
+  <% end %>
+</div>

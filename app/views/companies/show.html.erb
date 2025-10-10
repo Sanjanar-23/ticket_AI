@@ -6,5 +6,9 @@
   <%= link_to "Edit this company", edit_company_path(@company) %> |
   <%= link_to "Back to companies", companies_path %>
 
+  <%= link_to "Create Contact"%>
+  <%= link_to "Create Contact", new_contact_path(company_id: @company.id), class: "btn btn-success" %>
+
+
   <%= button_to "Destroy this company", @company, method: :delete %>
 </div>
