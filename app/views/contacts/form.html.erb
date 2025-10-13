@@ -6,6 +6,16 @@
       <%= f.hidden_field :company_id %>
     </div>
   <% end %>
+
+      <div>
+      <%= label_tag :company_name, "Company" %>
+      <%= text_field_tag :company_name, @contact.company.try(:name), readonly: true %>
+      <%= f.hidden_field :company_id %>
+      <%= f.text_field :company_id %>
+
+
+    </div>
+
   <div class="mb-3">
     <%= f.label :contact_person %>
     <%= f.text_field :contact_person, class: "form-control" %>

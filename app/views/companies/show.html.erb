@@ -11,4 +11,14 @@
 
 
   <%= button_to "Destroy this company", @company, method: :delete %>
+
+  <h3>Contacts</h3>
+<ul>
+  <% @company.contacts.each do |contact| %>
+    <li>
+      <%= contact.contact_person %> - <%= contact.designation %> - <%= contact.phone %> - <%= contact.email %>
+    </li>
+  <% end %>
+</ul>
+
 </div>
